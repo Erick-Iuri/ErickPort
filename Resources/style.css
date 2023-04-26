@@ -576,6 +576,10 @@ body.dark {
     
     }
 
+    .container-s3 {
+        display: none;
+    }
+
     /* sessão 04 */
 
     .display1-s2 {
@@ -608,6 +612,12 @@ body.dark {
         width: 100%;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+    /* sessão 03 */
+
+    .container-s3 {
+        display: none;
     }
 
     /* sessão 02 */
