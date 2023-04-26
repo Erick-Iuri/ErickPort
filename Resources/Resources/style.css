@@ -1,0 +1,634 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+
+body {
+    --cor-do-texto: #1E1E1E;
+    --cor-do-fundo: white;
+
+    background-color:var(--cor-do-fundo);
+}
+
+body.dark {
+    --cor-do-fundo: #1E1E1E;
+    --cor-do-texto: white;
+}
+
+
+/* menu de navegação */
+
+.Navegação {
+    margin: 0 auto;
+}
+
+.Conteiner-1 {
+    margin: 30px 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* hamburguer menu */
+
+#menu {
+    position: fixed;
+    right: 10%;
+    top: 2rem;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .menu-line1{
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    background: #0099FF;
+    transition: .6s;
+  }
+  
+  .menu-line2{
+    width: 80%;
+    height: 5px;
+    border-radius: 30px;
+    margin-top: .4rem;
+    background: #0099FF;
+    transition: .6s;
+  }
+  
+  .rotate{
+    transform: rotateZ(180deg)
+  }
+  .rotate1{
+    background: white;
+    transform: rotateZ(45deg);
+  }
+  .rotate2{
+    background: white;
+    width: 100%;
+    transform:  translate(0,-0.8rem) rotateZ(-45deg);
+  }
+  .nav-page1{
+    position: fixed ;
+    top:0 ;
+    left: 0;
+    background: #0099FF;
+    width: 60%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #1E1E1E;
+    transform: translate(0,-100%);
+    transition: .5s;
+  }
+  .nav-page1 span{
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    padding: 1rem;
+  }
+  
+  .nav-page1 span a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .nav-page1 span a:hover {
+    color: #1E1E1E;
+  }
+
+  .nav-page1 span a:active {
+    color: aqua;
+  }
+
+
+  .nav-page2{
+    position: fixed;
+    top:0 ;
+    left: 60%;
+    background: #0099FF;
+    width: 40%;
+    height: 70vh;
+    transition: .8s;
+    transform: translate(0,-100%);
+  }
+  
+  .transform{
+    transform: translate(0,0);
+  }
+/* hamburguer menu fim*/
+
+.Logo {
+    display: flex;
+}
+
+.Logo div{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #0099FF;
+}
+
+.Logo h1 {
+    font-weight: lighter;
+    font-size: 30px;
+    margin-left: 10px;
+    color:var(--cor-do-texto);
+}
+
+.menu {
+    cursor: pointer;
+}
+
+.menu .Hamburguer {
+    margin: 5px 0;
+
+    border-radius: 30px;
+    width: 70px;
+    height: 10px;
+    background-color: #2F2F2F;
+}
+
+.menu .Hamburguer-2 {
+    border-radius: 30px;
+    width: 70px;
+    height: 10px;
+    background-color:  #0099FF;
+}
+
+/* Menu de navegação Escondido */
+
+/* Sessão 01 */
+
+.Container-s1 {
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    margin: 30px 5%;
+    padding: 100px 10%;
+
+
+    -webkit-box-shadow: 1px 3px 19px -4px rgba(0,0,0,0.39);
+    -moz-box-shadow: 1px 3px 19px -4px rgba(0,0,0,0.39);
+    box-shadow: 1px 3px 19px -4px rgba(0,0,0,0.39);
+}
+
+.sessão-hello-s1 h2 {
+    color:var(--cor-do-texto);
+    font-size: 35px;
+    width: 80%;
+    min-width: 30%;
+}
+
+.contato-s1 {
+    padding: 5px 50px;
+    border-radius: 30px;
+    border: #0099FF 1px solid;
+    background-color: #0099FF;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contato-s1:hover {
+   background-color:var(--cor-do-fundo);
+   color: var(--cor-do-texto);
+}
+
+.link-edin {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin: 20px 20px;
+    border: none;
+    background-color: #0099FF;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.link-edin:hover {
+    background-color: white;
+    border: #0099FF 1px solid;
+    color: #0099FF;
+    cursor: pointer;
+}
+
+
+.link-edin img {
+    width: 20px;
+    height: 20px;
+    background-color: #0099FF;
+}
+
+.link-edin img:hover {
+    background-color: #0099FF;
+}
+
+.texto-s1 {
+    margin: 200px 0px 0px 0px;
+    width: 40%;
+    min-width: 30%;
+    font-size: 20px;
+    border: solid 1px #0099FF;
+    padding: 10px 10px;
+    color:var(--cor-do-texto);
+}
+
+/* sessão 02 */
+
+.container-titulos-s2 {
+    display: flex;
+    margin: 30px 10%;
+}
+
+.titulo-s2 {
+    font-size: 30px;
+    font-weight: bold;
+    color:var(--cor-do-texto);
+}
+
+.titulo2-s2 {
+    font-size: 20px;
+    margin: 100px 0 0 0;
+}
+
+.titulo2-s2 p {
+    color:var(--cor-do-texto);
+    margin-left: 40%;
+    display: flex;
+    justify-content: end;
+    width: 60%;
+
+}
+
+/* Black Theme */
+
+.center-switch {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.switch-s2 {
+    width: auto;
+    height: 300px;
+    background-color: #1E1E1E;
+
+    margin: 0px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+#icon-black {
+    margin-bottom: 30px;
+    color: white;
+    font-size: 60px;
+}
+
+.thema-preto {
+    background-color:var(--cor-do-texto);
+    color:var(--cor-do-fundo);
+    padding: 4px 30px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.thema-preto:hover {
+    background-color: white;
+    color: #1E1E1E;
+}
+
+
+.container-icon-s2 {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* switch button */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #1E1E1E;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #0099FF;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #0099FF;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+/*  switch button fim */
+
+
+
+/* Black Theme fim */
+
+
+.Container-flex-s2 {
+    display: flex;
+    margin: 60px 10%;
+    height: 300px;
+}
+
+.display1-s2 {
+    margin-right: 30px;
+    border: 1px solid #0099FF;
+    width: 33%;
+    padding: 30px;
+    color:var(--cor-do-texto);
+}
+
+.display2-s2 {
+    color:var(--cor-do-texto);
+    padding: 30px;
+    width: 33%;
+    margin-right: 30px;
+    border: 1px solid #0099FF;
+}
+
+.display3-s2 {
+    color:var(--cor-do-texto);
+    padding: 30px;
+    width: 33%;
+    border: 1px solid #0099FF;
+}
+
+.UX,
+.FRONT-END, 
+.PROGRAMAÇÃO {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.texto1-s2,
+.texto2-s2,
+.texto3-s2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.Container-flex-s2 span {
+    font-size: 60px;
+}
+
+/* sessão s3 */
+
+.container-s3 {
+    margin: 100px 10%;
+}
+
+.titulo-s3 {
+    color:var(--cor-do-texto);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.display-iframe {
+    display: flex;
+    justify-content: center;
+}
+
+.display-iframe  iframe {
+    height: 700px;
+    width: 33%;
+
+}
+
+/* sessão 04 */
+
+.hero-s4 {
+    background-color:  #1E1E1E;
+    padding: 100px 0;
+    margin-top: 30px;
+}
+
+.container-s4 {
+    margin: 0px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.div-4 {
+    color: white;
+    margin-right: 20%;
+    margin-top: 100px;
+}
+
+#titulo-s4 {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.div-4 p {
+    font-size: 20px;
+}
+
+.img-s4 img {
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+/* tablet */
+
+@media (max-width: 768px) {
+
+    .Container-s1 {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0%;
+    }
+
+     /* sessão 02 */
+
+     .container-titulos-s2 {
+        display: flex;
+        flex-direction: column;
+        margin: 100px 10%;
+    }
+
+    .Container-flex-s2 {
+        display: flex;
+        flex-direction: column;
+        margin: 60px 1%;
+        height: 100%;
+    }
+
+    .display1-s2 {
+        margin-right: 30px;
+        border: 1px solid #0099FF;
+        width: auto;
+        padding: 30px;
+    }
+    
+    .texto-s1 {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .display2-s2 {
+        padding: 30px;
+        width: auto;
+        margin-right: 30px;
+        border: 1px solid #0099FF;
+    }
+    
+    .display3-s2 {
+        padding: 30px;
+        width: auto;
+        margin-right: 30px;
+        border: 1px solid #0099FF;
+    }
+
+    /* sessão 03 */
+
+    .display-iframe {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .display-iframe  iframe {
+        height: 700px;
+        width: auto;
+    
+    }
+
+    /* sessão 04 */
+
+    .display1-s2 {
+        margin-right: 30px;
+        border: 1px solid #0099FF;
+        width: auto;
+        padding: 30px;
+    }
+    
+}
+
+@media (max-width: 1024px) {
+    .img-s4 {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 425px) {
+
+    .tema {
+        display: none;
+    }
+
+    .Container-s1 {
+        margin: 0px;
+    }
+
+    .texto-s1 {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* sessão 02 */
+
+    .container-titulos-s2 {
+        margin: 40px;
+    }
+
+    .Container-flex-s2 {
+        margin: 40px;
+    }
+
+    /* sessão 04 */
+
+    .div-4 {
+        width: auto;
+        margin: 40px;
+    }
+
+    .flex-s4 {
+        margin-top: 40px;
+    }
+
+}
