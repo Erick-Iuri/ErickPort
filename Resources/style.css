@@ -11,7 +11,6 @@
 body {
     --font-color--: black;
     --elements-color--: #09B2FF;
-    background: radial-gradient(43.88% 16.96% at 0% 23.29%, #75CCFE 0%, #FFFFFF 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     height: 100%;
 }
 
@@ -45,32 +44,40 @@ body {
     margin: 0px 20px;
     font-size: 15px;
     text-decoration: none;
-    color:var(--font-color--);
+    color: black;
     font-weight: bold;
-    transition: 2s ease;
+    padding: 5px 10px;
+    transition: 0.5s ease;
 }
 
 .Menu a:hover {
-    border-bottom: 1px solid black;
+    color: var(--elements-color--);
 }
+
 
 .contato button {
     padding: 10px 35px;
-    background-color: black;
-    color: white;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
     font-weight: bolder;
     border-radius: 30px;
-    border: none;
-    transition: 0,5s;
-    cursor: pointer;
+    border: 1px solid black;
+    cursor: pointer; 
+    transition: 0.5s ease;
 }
 
 .contato button:hover {
-    background-color:#09B2FF;
+    background-color: var(--elements-color--);
+    color: white;
+    border: none;
+    border: 1px solid var(--elements-color--);
+    box-shadow: 1px 10px 30px -0px #0098FE;
+    border-radius: 113.5px;
 }
 
 .contato button:active {
-    background-color: #0076ad;
+    color: white;
+    background-color: #0095da;
 }
 
 /* Sessão 01 */
@@ -100,11 +107,49 @@ h1 {
     border-radius: 40px;
 }
 
+/* type animation */
+
 .Frase-s1 {
     font-size: 50px;
     margin: 10px auto;
     font-weight: bold;
+    position: relative;
 }
+
+.Frase-s1::after,
+.Frase-s1:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0px;
+    left: 250px;
+    
+    background-color: rgb(255, 255, 255);
+
+    animation: TypeAnimation 6s infinite steps(32) forwards;
+}
+
+.Frase-s1::after {
+    width: 1px;
+    background-color: black;
+}
+
+@keyframes TypeAnimation {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes piscar {
+    to {
+        background-color: transparent;
+    }
+}
+
+
+
+/* type animation end */
 
 .Frase-s1-2 {
     font-size: 15px;
@@ -317,16 +362,23 @@ h1 {
     border-radius: 30px;
     font-weight: bold;
     border: none;
-    background-color: var(--elements-color--);
+    background-color: black;
+    border: 1px solid white;
+    transition: ease 0.9s;
 }
 
-.container-flex-fim button:hover {
-    background-color: white;
-    color: black;
+.container-flex-fim button:hover { 
+    background-color: var(--elements-color--);
+    color: white;
+    border: none;
+    border: 1px solid var(--elements-color--);
+    box-shadow: 1px 20px 50px -10px #0098FE;
+    border-radius: 113.5px;
 }
 
 .container-flex-fim button:active {
-    background-color: #09B2FF;
+    background-color: #0086c4;
+    border: #0086c4;
     color: white;
 }
 
@@ -338,7 +390,13 @@ h1 {
     align-items: center;
     margin: 12px 20px;
     cursor: pointer;
+    transition: ease 0.6s;
 }
+
+.container-flex-fim img:hover {
+    transform: translateY(-10px);
+}
+
 
 /* tablet */
 
