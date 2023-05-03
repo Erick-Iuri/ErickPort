@@ -9,9 +9,16 @@
 
 
 body {
-    --font-color--: black;
+    background-color: var(--cor--preto--);
+    --cor--preto--: black;
+    --font-color--: white;
     --elements-color--: #09B2FF;
     height: 100%;
+}
+
+body.dark {
+    --cor--preto--: white;
+    --font-color--: black;
 }
 
 /* Barra de navegação */
@@ -29,6 +36,9 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    border: none;
+    cursor: pointer;
+	outline: inherit;
 }
 
 .Menu {
@@ -37,16 +47,15 @@ body {
 }
 
 .menu-1 {
-    border-right: 1px solid black;
+    border-right: 1px solid var(--font-color--);
 }
 
 .Menu a {
     margin: 0px 20px;
     font-size: 15px;
     text-decoration: none;
-    color: black;
+    color: var(--font-color--);
     font-weight: bold;
-    padding: 5px 10px;
     transition: 0.5s ease;
 }
 
@@ -58,10 +67,10 @@ body {
 .contato button {
     padding: 10px 35px;
     background-color: transparent;
-    color: rgb(0, 0, 0);
+    color: var(--font-color--);
     font-weight: bolder;
     border-radius: 30px;
-    border: 1px solid black;
+    border: 1px solid var(--font-color--);
     cursor: pointer; 
     transition: 0.5s ease;
 }
@@ -101,7 +110,8 @@ h1 {
     margin: 0 auto;
     width: 50%;
     font-size: 50px;
-    background-color: black;
+    background: rgb(0,137,200);
+    background: linear-gradient(268.24deg, #09B2FF 6.87%, #00A8FE 20.92%, #0493E2 55.87%, #0075C2 97.42%);
     color: white;
     padding: 10px;
     border-radius: 40px;
@@ -114,6 +124,7 @@ h1 {
     margin: 10px auto;
     font-weight: bold;
     position: relative;
+    color: var(--font-color--);
 }
 
 .Frase-s1::after,
@@ -125,14 +136,14 @@ h1 {
     right: 0px;
     left: 250px;
     
-    background-color: rgb(255, 255, 255);
+    background-color: var(--cor--preto--);
 
     animation: TypeAnimation 6s infinite steps(32) forwards;
 }
 
 .Frase-s1::after {
     width: 1px;
-    background-color: black;
+    background-color: var(--font-color--);
 }
 
 @keyframes TypeAnimation {
@@ -155,6 +166,7 @@ h1 {
     font-size: 15px;
     width: 70%;
     margin: 0 auto;
+    color: var(--font-color--);
 }
 
 /* sessão 02 */
@@ -168,6 +180,7 @@ h1 {
 .container-2-s2 div p {
     font-size: 20px;
     font-weight: lighter;
+    color: var(--font-color--);
 }
 
 
@@ -181,8 +194,8 @@ h1 {
     display: flex;
     justify-content: center;
     margin: 0px 5%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid var(--font-color--);
+    border-bottom: 1px solid var(--font-color--);
     padding: 30px;
 }
 
@@ -193,6 +206,7 @@ h1 {
 }
 
 .Flex-container-s3 p {
+    color: var(--font-color--);
     font-family: 'Pacifico', cursive;
     font-size: 30px;
 }
@@ -209,10 +223,11 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-right: 1px solid black;
+    border-right: 1px solid var(--font-color--);
 }
 
 .texto-s4 h2 {
+    color: var(--font-color--);
     font-weight: lighter;
     font-family: 'Pacifico';
     font-size: 40px;
@@ -220,17 +235,20 @@ h1 {
 }
 
 .texto-s4 p {
+    color: var(--font-color--);
     font-size: 20px;
     width: 70%;
 }
 
 .texto2-s4 {
+    color: var(--font-color--);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .texto2-s4 h2 {
+    color: var(--font-color--);
     font-weight: lighter;
     font-family: 'Pacifico';
     font-size: 40px;
@@ -245,6 +263,7 @@ h1 {
 /* sessão 05 */
 
 .sessão-05 {
+    color: var(--font-color--);
     display: flex;
     justify-content: center;
 }
@@ -259,6 +278,7 @@ h1 {
 }
 
 .flex-container-s5 h2 {
+    color: var(--font-color--);
     text-align: center;
     margin-bottom: 40px;
     font-family: 'Pacifico';
@@ -268,6 +288,7 @@ h1 {
 }
 
 .flex-container-s5 p {
+    color: var(--font-color--);
     width: 100%;
     font-size: 20px;
 }
@@ -275,6 +296,7 @@ h1 {
 /* sessão 06 */
 
 .sessão-06 {
+    color: var(--font-color--);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -299,7 +321,16 @@ h1 {
     border: 1px solid var(--elements-color--);
     padding: 30px;
     margin: 40px 2%;
+    cursor: pointer;
+    transition: 0.8s ease;
 }
+
+.flex-container div:hover {
+    color: white;
+    background-color: var(--elements-color--);
+    box-shadow: 1px 10px 30px 10px #0098FE;
+}
+
 
 .flex-container div h2 {
     font-size: 25px;
@@ -334,6 +365,8 @@ h1 {
     margin-top: 100px;
     font-size: 30px;
     color: white;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .sessão-Fim div P {
@@ -434,7 +467,7 @@ h1 {
 @media (max-width: 425px) {
 
     body {
-        background: white;
+        background-color: var(--cor--preto--);
     }
 
     .container-1-s1 {
