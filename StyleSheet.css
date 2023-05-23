@@ -305,63 +305,50 @@ body {
 
 /* Sessão projetos */
 
-.Flex-Container-projeto {
-    display: flex;
-    justify-content: center;
-
-    margin: 100px 30px;
-}
-
-.Projeto-c1,
-.Projeto-c2 {
-    margin: 0px 20px;
-
-    width: 50%;
-}
-
-
-.Projeto-c1 section {
-    width: 100%;
-    height: 400px;
-    border-radius: 30px;
-
-    border: 1px solid #def818;
-}
-
-.Projeto-c2 section {
-    width: 100%;
-    height: 400px;
-    border-radius: 30px;
-
-    border: 1px solid #def818;
-}
-
-.Projeto-c2 p {
-    color: var(--cor--font--);
-    margin: 10px 20px;
-
-    font-size: 20px;
-}
-
-.Projeto-c1 p {
-    color: var(--cor--font--);
-    margin: 10px 20px;
-
-    font-size: 20px;
-}
-
-
 .container-p1 {
     display: flex;
     justify-content: center;
 
-    margin: 40px 0 100px 0 ;
+    margin: 60px 30px 60px 30px;
+}
+
+.Primeiro-projeto img {
+    width: 100%;
+    height: 100%;
+}
+
+.Segundo-projeto img {
+    width: 100%;
+    height: 100%;
 }
 
 .Primeiro-projeto {
-    width: 50%;
+    width: 40%;
+    border: 1px solid white;
 
+    margin: 0 10px;
     position: relative;
+
+    cursor: pointer;
+}
+
+.Primeiro-projeto::before {
+    content: "";
+
+    width: 100%;
+    height: 100%;
+    background-color: #000000cc;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transition: 0.9s ease;
+}
+
+.Primeiro-projeto:hover::before,
+.Segundo-projeto:hover::before {
+    background-color: transparent;
 }
 
 .Primeiro-projeto::after {
@@ -369,46 +356,54 @@ body {
 
     width: 100%;
     height: 100%;
+    
 
-    top: 0;
-    left: 0;
     position: absolute;
+    top: 0;
+    right: 0;
+
+    background: linear-gradient(243.18deg, rgba(255, 255, 255, 0.322) 0.83%, rgba(255, 255, 255, 0) 22.44%, rgba(255, 255, 255, 0.226) 44.04%, rgba(255, 255, 255, 0) 66.26%, rgba(255, 255, 255, 0) 85.04%, rgba(255, 255, 255, 0.054) 100.18%, rgba(255, 255, 255, 0) 100.18%);
+}
+
+
+/* segundo projeto */
+
+.Segundo-projeto {
+    width: 40%;
+    border: 1px solid white;
+
+    margin: 0 10px;
+    position: relative;
 
     cursor: pointer;
 
-    background: linear-gradient(243.18deg, rgba(255, 255, 255, 0.192) 0.83%, rgba(255, 255, 255, 0) 22.44%, rgba(255, 255, 255, 0.116) 44.04%, rgba(255, 255, 255, 0) 66.26%, rgba(255, 255, 255, 0) 85.04%, rgba(255, 255, 255, 0) 100.18%, rgba(255, 255, 255, 0) 100.18%);
 }
 
-.Primeiro-projeto:hover::before {
-    background-color: transparent;
-}
-
-
-
-.Primeiro-projeto::before {
+.Segundo-projeto::before {
     content: "";
 
     width: 100%;
     height: 100%;
+    background-color: #000000d3;
 
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
 
-    background-color: rgba(0, 0, 0, 0.781);
-
-    transition: 0.8s ease;
+    transition: 0.9s ease;
 }
 
+.Segundo-projeto::after {
+    content: "";
 
-.Primeiro-projeto img {
     width: 100%;
-    height: auto;
-
-    border: 1px solid white;
+    height: 100%;
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(243.18deg, rgba(255, 255, 255, 0.425) 0.83%, rgba(255, 255, 255, 0) 22.44%, rgba(255, 255, 255, 0.329) 44.04%, rgba(255, 255, 255, 0) 66.26%, rgba(255, 255, 255, 0) 85.04%, rgba(255, 255, 255, 0.054) 100.18%, rgba(255, 255, 255, 0.247) 100.18%);
 }
-
-
 
 
 /* @ MEDIA QUERYS */
